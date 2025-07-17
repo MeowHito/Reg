@@ -1,83 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login for Teacher - Maejo University</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Applying Kanit font as the default */
-        body {
-            font-family: 'Kanit', sans-serif;
-        }
-    </style>
-    <script>
-        // Custom color configuration for Tailwind CSS
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'mju-green': '#1A472A',
-                        'mju-gold': '#C7A252',
-                        'mju-tab-active': '#E6A301',
-                        'mju-tab-inactive': '#FBBF24',
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Login For Teacher</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-black flex justify-center items-center min-h-screen p-4">
 
-    <div class="w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl bg-white">
+<body>
 
-        <header class="bg-mju-green p-3">
-            <div class="flex items-center space-x-3">
-                <img src="https://asset.mju.ac.th/mju-logo/MJU_LOGO.svg" alt="Maejo University Logo" class="w-16 h-16">
-                <div class="text-white">
-                    <p class="text-sm font-semibold">ระบบทะเบียนการศึกษา</p>
-                    <h1 class="text-xl font-bold">มหาวิทยาลัยแม่โจ้</h1>
-                    <div class="border-t border-white my-1"></div>
-                    <h2 class="text-xl font-bold">MAEJO UNIVERSITY</h2>
+    <div class="relative bg-gray-150 md:h-screen flex justify-center items-center">
+        <div class="absolute relative w-full max-w-md">
+            <div class="h-50 bg-amber-500 rounded-4xl md:h-58 md:rounded-4xl">
+                <div class=" h-full flex items-end pb-4 px-4">
+                    <div class="relative flex z-50 w-full">
+                        <a href="#"
+                            class="flex-1 py-3 px-4 text-center text-sm font-medium text-green-700 
+                            bg-white hover:bg-gray-400 mx-2 rounded-lg">สำหรับอาจารย์</a>
+                        <a href="indexforstudent.html"
+                            class="flex-1 py-3 px-4 text-center text-sm font-medium text-white
+                            bg-green-700 hover:bg-gray-400 mx-2 rounded-lg">สำหรับนักศึกษา</a>
+                    </div>
                 </div>
             </div>
-        </header>
+            <div
+                class="absolute bg-green-600 top-0 left-0 w-full p-6 text-white shadow-lg rounded-b-4xl md:rounded-b-3xl">
+                <img class="absolute top-4 left-4 h-24"
+                    src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg" alt="Logo" />
+                <div class=" relative left-6">
+                    <h1 class="text-center text-white text-md md:text-2xl font-bold">ระบบทะเบียนการศึกษา</h1>
+                    <div class="bg-white h-1 w-4/7 my-1 mx-auto "></div>
+                    <h2 class="text-center text-white text-md font-semibold md:text-3xl">มหาวิทยาลัยแม่โจ้</h2>
+                    <h3 class="text-center text-white text-md md:text-2xl">MAEJO UNIVERSITY</h3>
+                </div>
+            </div>
 
-        <div class="bg-gradient-to-b from-yellow-300 to-orange-400 p-1.5 shadow-md flex rounded-b-2xl">
-            <a href="#" class="flex-1 text-center py-2 bg-mju-tab-active text-white font-semibold rounded-full shadow-inner">สำหรับอาจารย์</a>
-            <a href="#" class="flex-1 text-center py-2 text-mju-green font-semibold">สำหรับนักศึกษา</a>
+
+            <div class="py-8 px-8">
+                <div class="flex justify-center">
+                    <img class="h-32" src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg"
+                        alt="ตรามหาวิทยาลัยแม่โจ้" />
+                </div>
+                <h2 class="text-green-700 text-2xl font-semibold text-center mt-4">มหาวิทยาลัยแม่โจ้</h2>
+                <h3 class="text-green-700 text-lg text-center">MAEJO UNIVERSITY</h3>
+                <div class="mt-6">
+                    <div>
+                        <label for="username" class="block text-gray-700 text-sm font-bold mb-3">เลขประจำตัว</label>
+                        <input type="text" id="username"
+                            class=" text-gray-700 leading-tight focus:ring-0 focus:outline-none"
+                            placeholder="ใส่เลขประจำตัว">
+                        <div class="w-full h-0.75 bg-amber-500 my-1"></div>
+                    </div>
+                    <div class="mt-4">
+                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2">รหัสผ่าน</label>
+                        <input type="password" id="password"
+                            class="text-gray-700 leading-tight focus:outline-none focus:ring-0"
+                            placeholder="ใส่รหัสผ่าน">
+                        <div class="w-full h-0.75 bg-amber-500 my-1"></div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <a href="#"
+                            class="inline-block align-baseline font-semibold text-sm text-blue-900 hover:text-gray-800">
+                            <u>ลืมรหัสผ่าน</u>
+                        </a>
+                        <button
+                            class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="button">
+                            <a href="logined.html">เข้าสู่ระบบ</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-green-800 text-white text-center py-4">
+                <p class="text-sm">© 2025 มหาวิทยาลัยแม่โจ้</p>
+            </div>
         </div>
-        
-        <main class="px-8 py-6 flex flex-col items-center">
-            <img src="https://asset.mju.ac.th/mju-logo/MJU_LOGO.svg" alt="Maejo University Logo" class="w-24 h-24 mb-3">
-            <h2 class="text-mju-green font-bold text-xl">มหาวิทยาลัยแม่โจ้</h2>
-            <h3 class="text-mju-green font-bold text-xl">MAEJO UNIVERSITY</h3>
-
-            <form class="w-full mt-6 space-y-6">
-                <div class="relative">
-                    <label for="username" class="text-mju-green font-medium">เลขประจำตัว</label>
-                    <input type="text" id="username" class="w-full bg-transparent border-b-2 border-mju-gold focus:outline-none focus:border-mju-green transition-colors pb-1">
-                </div>
-
-                <div class="relative">
-                    <label for="password" class="text-mju-green font-medium">รหัสผ่าน</label>
-                    <input type="password" id="password" class="w-full bg-transparent border-b-2 border-mju-gold focus:outline-none focus:border-mju-green transition-colors pb-1">
-                </div>
-
-                <div class="flex justify-between items-center pt-4">
-                    <a href="#" class="text-mju-green text-sm font-medium hover:underline">ลืมรหัสผ่าน</a>
-                    <button type="submit" class="bg-mju-green text-white font-semibold py-2 px-8 rounded-full hover:bg-green-800 transition-colors">
-                        เข้าสู่ระบบ
-                    </button>
-                </div>
-            </form>
-        </main>
-
-        <footer class="bg-mju-green h-8"></footer>
     </div>
-
 </body>
-</html>
