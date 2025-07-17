@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
-    <div class="relative bg-gray-150 h-screen flex justify-center items-center">
-        <div class="absolute relative w-full max-w-md">
-                <div class="h-39 bg-amber-500 rounded-4xl md:h-44 md:rounded-4xl ">
-                    <div class="flex bg-white ">
-                        <a href="#" class="flex-1 py-3 px-4 text-center text-sm font-medium text-white bg-green-700
-                        hover:bg-green-800 rounded-full">สำหรับอาจารย์</a>
-                        <a href="#" class="flex-1 py-3 px-4 text-center text-sm font-medium text-green-700 bg-white
-                        rounded-full" >สำหรับนักศึกษา</a>
-                   </div>
-                </div>
-         <div class="absolute bg-green-600 top-0 left-0 w-full p-6 text-white shadow-lg rounded-b-4xl md:rounded-b-3xl">
-            <img class="absolute top-4 left-4 h-24" src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg" alt="Logo" />
-            <div class=" relative left-6"><h1 class="text-center text-white text-md md:text-2xl font-bold">ระบบทะเบียนการศึกษา</h1>
-                <div class="bg-white h-1 w-4/7 my-1 mx-auto "></div>
-                <h2 class="text-center text-white text-md font-semibold md:text-3xl">มหาวิทยาลัยแม่โจ้</h2>
-                <h3 class="text-center text-white text-md md:text-2xl">MAEJO UNIVERSITY</h3>
-            </div>
-         </div>
 
-         <!-- <div class="flex bg-white">
-             <a href="#" class="flex-1 py-3 px-4 text-center text-sm font-medium text-white bg-green-700
-             hover:bg-green-800 rounded-full">สำหรับอาจารย์</a>
-             <a href="#" class="flex-1 py-3 px-4 text-center text-sm font-medium text-green-700 bg-white
-             rounded-full" >สำหรับนักศึกษา</a>
-        </div> -->
-         <div class="py-8 px-8">
-          <div class="flex justify-center">
-           <img class="h-32" src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg" alt="ตรามหาวิทยาลัยแม่โจ้"/>
-          </div>
-          <h2 class="text-green-700 text-2xl font-semibold text-center mt-4">มหาวิทยาลัยแม่โจ้</h2>
-          <h3 class="text-green-700 text-lg text-center">MAEJO UNIVERSITY</h3>
-          <div class="mt-6">
-           <div>
-            <label for="username" class="block text-gray-700 text-sm font-bold mb-3">เลขประจำตัว</label>
-            <input type="text" id="username" class=" text-gray-700 leading-tight focus:ring-0 focus:outline-none" placeholder="ใส่เลขประจำตัว">
-            <div class="w-full h-0.75 bg-amber-500 my-1"></div>
-           </div>
-           <div class="mt-4">
-            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">รหัสผ่าน</label>
-            <input type="password" id="password" class="text-gray-700 leading-tight focus:outline-none focus:ring-0" placeholder="ใส่รหัสผ่าน">
-            <div class="w-full h-0.75 bg-amber-500 my-1"></div>
-           </div>
-           <div class="flex items-center justify-between mt-6">
-            <a href="#" class="inline-block align-baseline font-semibold text-sm text-blue-900 hover:text-gray-800">
-             <u>ลืมรหัสผ่าน</u>
-            </a>
-            <button class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-             <a href="logined.html">เข้าสู่ระบบ</a>
-            </button>
-           </div>
-          </div>
-         </div>
-         <div class="bg-green-800 text-white text-center py-4">
-          <p class="text-sm">© 2025 มหาวิทยาลัยแม่โจ้</p>
-         </div>
+<body>
+
+    <div class="relative bg-gray-150 md:h-screen flex justify-center items-center">
+        <div class="absolute relative w-full max-w-md">
+            <div class="h-50 bg-amber-500 rounded-4xl md:h-58 md:rounded-4xl">
+                <div class=" h-full flex items-end pb-4 px-4">
+                    <div class="relative flex z-50 w-full">
+                        <a href="#"
+                            class="flex-1 py-3 px-4 text-center text-sm font-medium text-white bg-green-700 hover:bg-green-800 mx-2 rounded-lg">สำหรับอาจารย์</a>
+                        <a href="#"
+                            class="flex-1 py-3 px-4 text-center text-sm font-medium text-green-700 bg-white hover:bg-gray-200 mx-2 rounded-lg">สำหรับนักศึกษา</a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="absolute bg-green-600 top-0 left-0 w-full p-6 text-white shadow-lg rounded-b-4xl md:rounded-b-3xl">
+                <img class="absolute top-4 left-4 h-24"
+                    src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg" alt="Logo" />
+                <div class=" relative left-6">
+                    <h1 class="text-center text-white text-md md:text-2xl font-bold">ระบบทะเบียนการศึกษา</h1>
+                    <div class="bg-white h-1 w-4/7 my-1 mx-auto "></div>
+                    <h2 class="text-center text-white text-md font-semibold md:text-3xl">มหาวิทยาลัยแม่โจ้</h2>
+                    <h3 class="text-center text-white text-md md:text-2xl">MAEJO UNIVERSITY</h3>
+                </div>
+            </div>
+
+
+            <div class="py-8 px-8">
+                <div class="flex justify-center">
+                    <img class="h-32" src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg"
+                        alt="ตรามหาวิทยาลัยแม่โจ้" />
+                </div>
+                <h2 class="text-green-700 text-2xl font-semibold text-center mt-4">มหาวิทยาลัยแม่โจ้</h2>
+                <h3 class="text-green-700 text-lg text-center">MAEJO UNIVERSITY</h3>
+                <div class="mt-6">
+                    <div>
+                        <label for="username" class="block text-gray-700 text-sm font-bold mb-3">เลขประจำตัว</label>
+                        <input type="text" id="username"
+                            class=" text-gray-700 leading-tight focus:ring-0 focus:outline-none"
+                            placeholder="ใส่เลขประจำตัว">
+                        <div class="w-full h-0.75 bg-amber-500 my-1"></div>
+                    </div>
+                    <div class="mt-4">
+                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2">รหัสผ่าน</label>
+                        <input type="password" id="password"
+                            class="text-gray-700 leading-tight focus:outline-none focus:ring-0"
+                            placeholder="ใส่รหัสผ่าน">
+                        <div class="w-full h-0.75 bg-amber-500 my-1"></div>
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <a href="#"
+                            class="inline-block align-baseline font-semibold text-sm text-blue-900 hover:text-gray-800">
+                            <u>ลืมรหัสผ่าน</u>
+                        </a>
+                        <button
+                            class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="button">
+                            <a href="logined.html">เข้าสู่ระบบ</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-green-800 text-white text-center py-4">
+                <p class="text-sm">© 2025 มหาวิทยาลัยแม่โจ้</p>
+            </div>
         </div>
-       </div>
+    </div>
 </body>
-</html>
