@@ -9,6 +9,43 @@
 </head>
 
 <body class="bg-gray-100">
+    <!-- แถบแจ้งเตือน -->
+    <div id="notification" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+      <div class="flex items-center space-x-2">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        <span>ยืนยันเลือกสำเร็จแล้ว</span>
+      </div>
+    </div>
+    <!-- สำหรับการอันที่เด้งขึ้นมาเมื่อกดยืนยัน -->
+    <style>
+      #notification {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-100%);
+        transition: all 0.3s ease;
+      }
+      #notification:target {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        animation: hideNotification 3s ease forwards;
+      }
+      @keyframes hideNotification {
+        0% {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+        85% {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(-50%) translateY(-100%);
+        }
+      }
+    </style>
+
     <div class="relative bg-gray-150 md:h-screen flex justify-center items-center">
       <div class="absolute relative w-full max-w-md md:max-w-xl">
         <div class="h-43 bg-amber-500 rounded-4xl md:h-50 md:rounded-4xl">
@@ -93,8 +130,8 @@
 
             <!-- ปุ่มยืนยัน -->
             <div class="flex justify-center mt-5 items-center">
-              <a href="selected.html">
-                <button class="bg-green-700 text-white px-15 py-2 rounded-lg hover:bg-green-800">
+              <a href="#notification">
+                <button class="bg-green-700 text-white px-15 py-2 rounded-lg hover:bg-green-800 transition-colors">
                   ยืนยัน
                 </button>
               </a>
@@ -104,6 +141,8 @@
         </div>
       </div>
     </div>
+
+
 </body>
 
 </html>
