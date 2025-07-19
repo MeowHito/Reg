@@ -11,74 +11,80 @@
 </head>
 
 <body>
-  <div class="absolute relative bg-gray-150 md:h-screen flex justify-center items-center">
-    <div class="relative w-full max-w-md">
-        <div class="h-39 bg-amber-500 rounded-4xl md:h-50 md:rounded-4xl">
-            <div class=" h-full flex items-end pb-4 px-4">
+  <div class="absolute relative bg-gray-150 min-h-screen flex justify-center items-start md:items-center py-10 md:py-0">
+    <div class="relative w-full max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
+        <div class="h-49 bg-amber-500 rounded-4xl md:h-59 lg:h-73 md:rounded-4xl">
+            <div class="h-full flex items-end pb-4 px-4 md:items-center md:pb-0">
                 <div class="relative flex z-50 w-full">
                     <a href="studentmainpage.html" class="">
-                        <img src="img/angle-left (1).png" class="absolute relative top-5 py-3 px-4 h-13  "
+                        <img src="img/angle-left (1).png" class="absolute relative top-5 py-3 px-4
+                         h-13 md:top-0 md:py-2 md:px-3 md:h-10 lg:h-12 md:top-22 lg:top-29"
                             alt="ย้อนกลับ"></a>
                 </div>
             </div>
         </div>
         <div
-            class="absolute bg-green-600 top-0 left-0 w-full p-6 text-white shadow-lg rounded-b-4xl md:rounded-b-3xl">
-            <img class="absolute top-4 left-4 h-24"
+            class="absolute bg-green-600 top-0 left-0 w-full p-6 md:p-8 lg:p-12 text-white shadow-lg rounded-b-4xl
+             md:rounded-b-3xl h-[160px] md:h-[180px] lg:h-[240px]">
+            <img class="absolute top-4 left-4 h-24 md:h-20 lg:h-32 md:top-6 md:left-6 lg:top-8 lg:left-8"
                 src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg" alt="Logo" />
-            <div class=" relative left-6">
-                <h1 class="text-center text-white text-md md:text-2xl font-bold">ระบบทะเบียนการศึกษา</h1>
-                <div class="bg-white h-1 w-4/7 my-1 mx-auto "></div>
-                <h2 class="text-center text-white text-md font-semibold md:text-3xl">มหาวิทยาลัยแม่โจ้</h2>
-                <h3 class="text-center text-white text-md md:text-2xl">MAEJO UNIVERSITY</h3>
+            <div class="relative left-6 md:left-8 lg:left-12 mt-4 md:mt-2">
+                <h1 class="text-center text-white text-md md:text-xl lg:text-3xl xl:text-4xl font-bold">ระบบทะเบียนการศึกษา</h1>
+                <div class="bg-white h-1 w-4/7 my-1 mx-auto md:h-1 lg:h-1 "></div>
+                <h2 class="text-center text-white text-md font-semibold md:text-2xl lg:text-4xl xl:text-5xl">มหาวิทยาลัยแม่โจ้</h2>
+                <h3 class="text-center text-white text-md md:text-xl lg:text-3xl xl:text-4xl">MAEJO UNIVERSITY</h3>
             </div>
         </div>
 
-            <div class="max-w-3xl mx-auto p-6 bg-white mt-6 rounded-2xl shadow-lg">
-                <h2 class="text-2xl text-blue-700 font-bold mb-4">ปฏิทินการศึกษา</h2>
+        <div class="max-w-3xl md:max-w-full mx-auto p-6 md:p-8 lg:p-10 bg-white mt-6 rounded-2xl shadow-lg">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl text-blue-700 font-bold mb-4 md:mb-6">ปฏิทินการศึกษา</h2>
 
-                <div class="mb-4">
-                    <label class="font-semibold">ชุดปฏิทิน</label>
-                    <select class="ml-2 border rounded px-2 py-1">
-                        <option>1001: ปริญญาตรี ภาคปกติ ปี 2568</option>
-                    </select>
-                </div>
+            <div class="mb-4 md:mb-6">
+                <label class="font-semibold md:text-lg lg:text-xl">ชุดปฏิทิน</label>
+                <select class="ml-2 border rounded px-2 py-1 md:px-3 md:py-2 lg:px-4 lg:py-3 md:text-base lg:text-lg">
+                    <option>1001: ปริญญาตรี ภาคปกติ ปี 2568</option>
+                </select>
+            </div>
 
-                <div class="font-semibold mb-4">
-                    ภาคเรียน:
-                    <a href="term1.html" class="text-blue-600 mx-2 hover:underline">ภาคเรียนที่ 1</a>
-                    <a href="term2.html" class="text-blue-600 mx-2 hover:underline">ภาคเรียนที่ 2</a>
-                    <a href="summerterm.html" class="text-blue-600 mx-2 hover:underline">ภาคฤดูร้อน</a>
-                </div>
-<div class="overflow-x-auto">
-          <table class="min-w-full border border-gray-300 text-sm">
-            <thead class="bg-gray-200">
-              <tr>
-                <th class="border px-2 py-2 text-left">รายการ</th>
-                <th class="border px-2 py-2 text-center">วันเริ่มต้น</th>
-                <th class="border px-2 py-2 text-center">วันสุดท้าย</th>
-              </tr>
-            </thead>
-            <tbody class="bg-white">
-              <tr><td class="border px-2 py-2">ลงทะเบียนปกติ (on-line)</td><td class="border text-center">17 มิ.ย. 2568</td><td class="border text-center">20 มิ.ย. 2568</td></tr>
-              <tr><td class="border px-2 py-2">- ชั้นปี 1 (ตามรหัสขึ้นต้น)</td><td class="border text-center">18 มิ.ย. 2568</td><td class="border text-center">18 มิ.ย. 2568</td></tr>
-              <tr><td class="border px-2 py-2">- ชั้นปี 2</td><td class="border text-center">19 มิ.ย. 2568</td><td class="border text-center">19 มิ.ย. 2568</td></tr>
-              <tr><td class="border px-2 py-2">- ชั้นปี 3</td><td class="border text-center">20 มิ.ย. 2568</td><td class="border text-center">20 มิ.ย. 2568</td></tr>
-              <tr><td class="border px-2 py-2">วันเปิดภาคการศึกษา</td><td class="border text-center">23 มิ.ย. 2568</td><td class="border text-center">23 มิ.ย. 2568</td></tr>
-              <tr><td class="border px-2 py-2">ช่วงลงทะเบียนเพิ่ม/ถอน/เปลี่ยนกลุ่ม</td><td class="border text-center">23 มิ.ย. 2568</td><td class="border text-center">25 มิ.ย. 2568</td></tr>
-              <tr><td class="border px-2 py-2">ชำระเงินผ่านธนาคาร</td><td class="border text-center">30 มิ.ย. 2568</td><td class="border text-center">06 ก.ค. 2568</td></tr>
-              <tr><td class="border px-2 py-2">ช่วงสอบกลางภาค</td><td class="border text-center">18 ส.ค. 2568</td><td class="border text-center">24 ส.ค. 2568</td></tr>
-              <tr><td class="border px-2 py-2">วันสุดท้ายของการเรียนการสอน</td><td class="border text-center">12 ต.ค. 2568</td><td class="border text-center">12 ต.ค. 2568</td></tr>
-              <tr><td class="border px-2 py-2">ช่วงสอบปลายภาค</td><td class="border text-center">14 ต.ค. 2568</td><td class="border text-center">27 ต.ค. 2568</td></tr>
-              <tr><td class="border px-2 py-2">วันปิดภาคการศึกษา</td><td class="border text-center">28 ต.ค. 2568</td><td class="border text-center">28 ต.ค. 2568</td></tr>
-            </tbody>
-          </table>
+            <div class="font-semibold mb-4 md:mb-6 md:text-lg lg:text-xl">
+                ภาคเรียน:
+                <a href="term1.html" class="text-blue-600 mx-2 hover:underline">ภาคเรียนที่ 1</a>
+                <a href="term2.html" class="text-blue-600 mx-2 hover:underline">ภาคเรียนที่ 2</a>
+                <a href="summerterm.html" class="text-blue-600 mx-2 hover:underline">ภาคฤดูร้อน</a>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="min-w-full border border-gray-300 text-sm md:text-base lg:text-lg">
+                    <thead class="bg-gray-200">
+                        <tr>
+                            <th class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-left">รายการ</th>
+                            <th class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-center">วันเริ่มต้น</th>
+                            <th class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4 text-center">วันสุดท้าย</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">ลงทะเบียนปกติ (on-line)</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">17 มิ.ย. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">20 มิ.ย. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">- ชั้นปี 1 (ตามรหัสขึ้นต้น)</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">18 มิ.ย. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">18 มิ.ย. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">- ชั้นปี 2</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">19 มิ.ย. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">19 มิ.ย. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">- ชั้นปี 3</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">20 มิ.ย. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">20 มิ.ย. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">วันเปิดภาคการศึกษา</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">23 มิ.ย. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">23 มิ.ย. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">ช่วงลงทะเบียนเพิ่ม/ถอน/เปลี่ยนกลุ่ม</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">23 มิ.ย. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">25 มิ.ย. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">ชำระเงินผ่านธนาคาร</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">30 มิ.ย. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">06 ก.ค. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">ช่วงสอบกลางภาค</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">18 ส.ค. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">24 ส.ค. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">วันสุดท้ายของการเรียนการสอน</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">12 ต.ค. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">12 ต.ค. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">ช่วงสอบปลายภาค</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">14 ต.ค. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">27 ต.ค. 2568</td></tr>
+                        <tr><td class="border px-2 py-2 md:px-4 md:py-3 lg:px-6 lg:py-4">วันปิดภาคการศึกษา</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">28 ต.ค. 2568</td><td class="border text-center md:px-4 md:py-3 lg:px-6 lg:py-4">28 ต.ค. 2568</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div class="bg-green-800 text-white text-center py-4 md:py-6 lg:py-8 mt-8 md:mt-10 lg:mt-12 rounded-lg">
+                <p class="text-sm md:text-base lg:text-lg">© 2025 มหาวิทยาลัยแม่โจ้</p>
+            </div>
         </div>
-
-        <!-- Footer -->
-       <div class="bg-green-800 text-white text-center py-4 mt-8">
-        <p class="text-sm">© 2025 มหาวิทยาลัยแม่โจ้</p>
     </div>
+  </div>
 </body>
 
 </html>
