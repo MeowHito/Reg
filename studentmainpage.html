@@ -8,87 +8,103 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="min-h-screen bg-gray-100">
-  <div class="relative flex justify-center items-start py-10 md:py-20">
-    <div class="relative w-full max-w-md ">
-      <div class="h-50 bg-amber-500 rounded-4xl md:h-65 md:rounded-4xl md:">
-        <div class="h-full flex items-end pb-4 px-4">
-          <div class="flex z-50 w-full">
+<!-- ... keep everything above the same -->
 
-            <button onclick="toggleMenu()" class="flex-1 py-3 px-4 text-center text-sm font-medium text-white 
+<body class="min-h-screen bg-gray-100">
+    <div class="relative flex justify-center items-start py-10 md:py-20">
+      <!-- จาก max-w-md → md:max-w-4xl -->
+      <div class="relative w-full max-w-md md:max-w-4xl md:px-10">
+        <!-- กล่อง amber -->
+        <div class="h-50 bg-amber-500 rounded-4xl md:h-65  md:rounded-4xl">
+          <div class="h-full flex items-end pb-4 px-4">
+            <div class="flex z-50 w-full md:justify-center md:gap-46">
+              <button onclick="toggleMenu()"
+                class="flex-1 md:flex-none md:w-40 py-3 px-4 text-center text-sm font-medium text-white 
                 bg-green-700 hover:bg-gray-400 mx-2 rounded-lg">เมนูหลัก</button>
-            <a href="index.html" class="flex-1 py-3 px-4 text-center text-sm font-medium text-white
+              <a href="index.html"
+                class="flex-1 md:flex-none md:w-40 py-3 px-4 text-center text-sm font-medium text-white
                 bg-green-700 hover:bg-gray-400 mx-2 rounded-lg">ออกจากระบบ</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- เมนู popup -->
+        <div id="mainMenu"
+          class="hidden absolute top-24 left-4 right-4 bg-white shadow-xl rounded-xl z-50 p-4 md:max-w-md md:mx-auto">
+          <div class="flex flex-col gap-2 md:grid md:grid-cols-2 md:gap-4">
+            <a href="timetablestudent.html"
+              class="bg-green-100 hover:bg-green-200 text-green-800 font-medium py-2 px-4 rounded">ตารางเรียน</a>
+            <a href="selectaddress.html"
+              class="bg-green-100 hover:bg-green-200 text-green-800 font-medium py-2 px-4 rounded">ตารางการใช้ห้อง</a>
+            <a href="calendar.html"
+              class="bg-green-100 hover:bg-green-200 text-green-800 font-medium py-2 px-4 rounded">ปฏิทินการศึกษา</a>
+            <button onclick="toggleMenu()"
+              class="bg-red-100 hover:bg-red-200 text-red-800 font-medium py-2 px-4 rounded">ปิดเมนู</button>
+          </div>
+        </div>
+  
+        <!-- Header green -->
+        <div
+          class="absolute bg-green-600 top-0 left-0 w-full p-6 text-white shadow-lg rounded-b-4xl md:rounded-b-3xl md:p-10">
+          <img class="absolute top-4 left-4 h-24 md:h-35"
+            src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg" alt="Logo" />
+          <div class="relative left-6 md:ml-28">
+            <h1 class="text-center text-white text-md md:text-2xl font-bold">ระบบทะเบียนการศึกษา</h1>
+            <div class="bg-white h-1 w-4/7 my-1 mx-auto "></div>
+            <h2 class="text-center text-white text-md font-semibold md:text-3xl">มหาวิทยาลัยแม่โจ้</h2>
+            <h3 class="text-center text-white text-md md:text-2xl">MAEJO UNIVERSITY</h3>
+          </div>
+        </div>
+  
+        <!-- ส่วนประกาศ -->
+        <div class="py-8 px-3 md:px-10 md:pt-48">
+          <!-- หัวประกาศ -->
+          <div class="bg-gray-400 h-8 -mt-6 flex items-center md:h-10">
+            <p class="text-white font-bold mx-5 md:text-lg">ประกาศเรื่อง</p>
+          </div>
+  
+          <!-- รายการประกาศ 1 -->
+          <div class="py-6">
+            <p class="py-3 text-blue-700 font-bold text-xl">1. คู่มือการใช้งาน MS Teams</p>
+            <div class="flex justify-center items-center">
+              <img class="w-full md:w-[600px]" src="https://erp.mju.ac.th/openFile.aspx?id=NjkyMzk4&method=inline"
+                alt="">
+            </div>
+          </div>
+  
+          <!-- รายการประกาศ 2 -->
+          <div class="py-6">
+            <p class="py-3 text-blue-700 font-bold text-xl">2. 10100214 ผษ101 เกษตรเพื่อชีวิต</p>
+            <div class="flex justify-center items-center">
+              <img class="w-full md:w-[600px]" src="https://erp.mju.ac.th/openFile.aspx?id=NzE3MzI0&method=inline"
+                alt="">
+            </div>
+          </div>
+  
+          <!-- รายการประกาศ 3 -->
+          <div class="py-6">
+            <p class="py-3 text-blue-700 font-bold text-xl">3. รักษาสภาพ/ลาพักการศึกษา</p>
+            <div class="flex justify-center items-center">
+              <img class="w-full md:w-[600px]" src="https://erp.mju.ac.th/openFile.aspx?id=NzE4OTA5&method=inline"
+                alt="">
+            </div>
+          </div>
+  
+          <!-- Footer -->
+          <div class="bg-green-800 text-white text-center py-4 mt-8 rounded-xl">
+            <p class="text-sm">© 2025 มหาวิทยาลัยแม่โจ้</p>
           </div>
         </div>
       </div>
-
-      <div id="mainMenu" class="hidden absolute top-24 left-4 right-4 bg-white shadow-xl rounded-xl z-50 p-4 ">
-        <div class="flex flex-col gap-2 md:grid-cols-3 gap-4">
-          <a href="timetablestudent.html"
-            class="bg-green-100 hover:bg-green-200 text-green-800 font-medium py-2 px-4 rounded">ตารางเรียน</a>
-          <a href="#"
-            class="bg-green-100 hover:bg-green-200 text-green-800 font-medium py-2 px-4 rounded">ตารางการใช้ห้อง</a>
-          <a href="calendar.html"
-            class="bg-green-100 hover:bg-green-200 text-green-800 font-medium py-2 px-4 rounded">ปฏิทินการศึกษา</a>
-          <button onclick="toggleMenu()"
-            class="bg-red-100 hover:bg-red-200 text-red-800 font-medium py-2 px-4 rounded">ปิดเมนู</button>
-        </div>
-      </div>
-
-      <div class="absolute bg-green-600 top-0 left-0 w-full p-6 text-white shadow-lg rounded-b-4xl md:rounded-b-3xl md:p-10">
-        <img class="absolute top-4 left-4 h-24"
-          src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg" alt="Logo" />
-        <div class="relative left-6 md:mt-0">
-          <h1 class="text-center text-white text-md md:text-2xl font-bold">ระบบทะเบียนการศึกษา</h1>
-          <div class="bg-white h-1 w-4/7 my-1 mx-auto "></div>
-          <h2 class="text-center text-white text-md font-semibold md:text-3xl">มหาวิทยาลัยแม่โจ้</h2>
-          <h3 class="text-center text-white text-md md:text-2xl">MAEJO UNIVERSITY</h3>
-        </div>
-      </div>
-
-      <div class="py-8 px-3">
-        <div class="bg-gray-400 h-8 -mt-6 flex items-center">
-          <p class="text-white font-bold mx-5 ">ประกาศเรื่อง</p>
-        </div>
-        <div>
-          <p class="py-3 text-blue-700 font-bold text-xl ">1. คู่มือการใช้งานMS Teams</p>
-        </div>
-        <div class="flex justify-center items-center">
-          <img width="400px" src="https://erp.mju.ac.th/openFile.aspx?id=NjkyMzk4&method=inline" alt="">
-        </div>
-      </div>
-
-      <div class="py-8 px-3">
-        <div>
-          <p class="py-3 text-blue-700 font-bold text-xl ">2. 10100214 ผษ101 เกษตรเพื่อชีวิต</p>
-        </div>
-        <div class="flex justify-center items-center">
-          <img width="400px" src="https://erp.mju.ac.th/openFile.aspx?id=NzE3MzI0&method=inline" alt="">
-        </div>
-      </div>
-
-      <div class="py-8 px-3">
-        <div>
-          <p class="py-3 text-blue-700 font-bold text-xl ">3. รักษาสภาพ/ลาพักการศึกษา</p>
-        </div>
-        <div class="flex justify-center items-center">
-          <img width="400px" src="https://erp.mju.ac.th/openFile.aspx?id=NzE4OTA5&method=inline" alt="">
-        </div><br>
-        <div class="bg-green-800 text-white text-center py-4">
-          <p class="text-sm">© 2025 มหาวิทยาลัยแม่โจ้</p>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <!-- JavaScript สำหรับ toggle popup -->
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('mainMenu');
-      menu.classList.toggle('hidden');
-    }
-  </script>
-</body>
-
-</html>
+  
+    <!-- JavaScript toggle -->
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('mainMenu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
+  </body>
+  </html>
+  
