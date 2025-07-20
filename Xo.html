@@ -40,11 +40,17 @@
                     <div class="mt-6">
                         <h3 class="text-white text-sm font-medium mb-3">การสนทนา</h3>
                         <div class="space-y-2">
-                            <div class="p-3 rounded-lg bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 text-gray-700 cursor-pointer hover:bg-indigo-100 transition-all">
+                            <div class="p-3 rounded-lg bg-white border text-gray-700 cursor-pointer
+                             ">
                                 <div class="flex items-center gap-2">
                                     <div class="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
                                     การสนทนาปัจจุบัน
+    
                                 </div>
+                            </div>
+                            <div class="bg-white p-3 rounded-lg border border-gray-300 flex justify-center
+                            text-gray-700 hover:bg-gray-50 mt-auto font-bold text-l">
+                            <button onclick="history.back()">ย้อนกลับ</button>
                             </div>
                         </div>
                     </div>
@@ -77,9 +83,9 @@
 
             <!-- Messages Container -->
             <div class="flex-1 overflow-y-auto scrollbar-custom p-4 lg:p-6">
-                <!-- Welcome Message -->
-                <div class="flex flex-col items-center justify-center h-full text-center animate-fade-in" style="animation-delay: 0.5s;">
-                    <div class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-6 animate-float">
+                <div class="flex flex-col items-center justify-center h-full text-center">
+                    <div class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full 
+                    flex items-center justify-center mb-6">
                         <img src="img/messenger.png" class="w-10 h-10 text-white" alt="">
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800 mb-2">ผมชื่อ Xo</h3>
@@ -95,9 +101,7 @@
                             placeholder="พิมพ์ข้อความ..."
                             class="w-full bg-gray-50 border border-gray-300 
                             rounded-2xl px-4 py-3 pr-12 text-gray-800 placeholder-gray-500 resize-none 
-                            focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all min-h-[48px] max-h-32"
-                            rows="1"
-                            onInput="this.style.height = 'auto'; this.style.height = Math.min(this.scrollHeight, 128) + 'px'"
+                             focus:border-transparent transition-all min-h-[48px] max-h-32"
                         ></textarea>
                     </div>
                 </div>
