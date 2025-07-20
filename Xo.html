@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xo - AI Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+</head>
+<body class="h-screen overflow-hidden font-sans">
+
+
+    <div class="flex h-screen">
+        <!-- Sidebar Container -->
+        <div class="sidebar-container bg-green-500">
+
+            <!-- Sidebar -->
+            <div class="sidebar w-80 lg:w-72 xl:w-80 glass-effect fixed lg:relative z-50 
+            h-full flex flex-col border-r border-gray-200">
+                <!-- Sidebar Header -->
+                <div class="p-6 border-b border-gray-200">
+                    <div class="flex items-center justify-between">
+                        <h1 class="text-3xl font-bold text-white ">Xo</h1>
+                        
+                    </div>
+                    <p class="text-white text-sm mt-2 ">AI Assistant</p>
+                </div>
+
+                <!-- Sidebar Content -->
+                <div class="flex-1 p-6 overflow-y-auto scrollbar-custom">
+                    <!-- New Chat Button -->
+                    <button class="w-full bg-white hover:bg:bg-gray-600
+                     text-green-700 font-medium py-3 px-4 rounded-xl">
+                        <div class="flex items-center justify-center gap-2">เริ่มการสนทนาใหม่
+                        </div>
+                    </button>
+
+                    <!-- Chat History -->
+                    <div class="mt-6">
+                        <h3 class="text-white text-sm font-medium mb-3">การสนทนา</h3>
+                        <div class="space-y-2">
+                            <div class="p-3 rounded-lg bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 text-gray-700 cursor-pointer hover:bg-indigo-100 transition-all">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
+                                    การสนทนาปัจจุบัน
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col">
+            <!-- Chat Header -->
+            <div class="glass-effect p-4 lg:p-6 border-b border-gray-200 animate-slide-up">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center animate-float">
+                            <span class="text-white font-bold text-lg">X</span>
+                        </div>
+                        <div>
+                            <h2 class="text-gray-800 font-semibold text-lg">Xo Assistant</h2>
+                            <p class="text-gray-600 text-sm">พร้อมช่วยเหลือคุณ</p>
+                        </div>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-2">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-green-600 text-sm">ออนไลน์</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages Container -->
+            <div class="flex-1 overflow-y-auto scrollbar-custom p-4 lg:p-6">
+                <!-- Welcome Message -->
+                <div class="flex flex-col items-center justify-center h-full text-center animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-6 animate-float">
+                        <img src="img/messenger.png" class="w-10 h-10 text-white" alt="">
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">ผมชื่อ Xo</h3>
+                    <p class="text-gray-600 max-w-md leading-relaxed">สวัสดีครับ</p>
+                </div>
+            </div>
+
+            <!-- Input Area - ย้ายมาอยู่ด้านล่างสุด -->
+            <div class="border-gray-200 p-4 lg:p-6">
+                <div class="flex items-end gap-3 max-w-4xl mx-auto">
+                    <div class="flex-1 relative">
+                        <textarea
+                            placeholder="พิมพ์ข้อความ..."
+                            class="w-full bg-gray-50 border border-gray-300 
+                            rounded-2xl px-4 py-3 pr-12 text-gray-800 placeholder-gray-500 resize-none 
+                            focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all min-h-[48px] max-h-32"
+                            rows="1"
+                            onInput="this.style.height = 'auto'; this.style.height = Math.min(this.scrollHeight, 128) + 'px'"
+                        ></textarea>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
