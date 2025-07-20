@@ -1,189 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>เลือกห้อง</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #notification {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-100%);
+      transition: all 0.5s ease;
+      pointer-events: none;
+    }
+
+    #notification.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+  </style>
 </head>
 
 <body class="bg-gray-100">
-    <!-- แถบแจ้งเตือน -->
-    <div id="notification" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
-      <div class="flex items-center space-x-2">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-        </svg>
-        <span>ยืนยันเลือกสำเร็จแล้ว</span>
-      </div>
+  <!-- กล่องแจ้งเตือน -->
+  <div id="notification"
+    class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50">
+    <div class="flex items-center space-x-2">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <span>ห้องที่เลือกพร้อมใช้บริการ</span>
     </div>
-    <!-- สำหรับการอันที่เด้งขึ้นมาเมื่อกดยืนยัน -->
-    <style>
-      #notification {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-100%);
-        transition: all 0.3s ease;
-      }
-      #notification:target {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-        animation: hideNotification 3s ease forwards;
-      }
-      @keyframes hideNotification {
-        0% {
-          opacity: 1;
-          transform: translateX(-50%) translateY(0);
-        }
-        85% {
-          opacity: 1;
-          transform: translateX(-50%) translateY(0);
-        }
-        100% {
-          opacity: 0;
-          transform: translateX(-50%) translateY(-100%);
-        }
-      }
-    </style>
+  </div>
 
-    <div class="relative bg-gray-150 md:h-screen flex justify-center items-center">
-      <div class="absolute relative w-full max-w-md md:max-w-xl">
-        <div class="h-43 bg-amber-500 rounded-4xl md:h-50 md:rounded-4xl">
-          <div class="h-full flex items-end pb-4 px-4">
-            <div class="relative flex z-50 w-full">
-              <a href="selectaddress.html">
-                <img src="img/angle-left (1).png" class="absolute relative top-5 py-3 px-4 h-13" alt="ย้อนกลับ" />
+  <div class="relative bg-gray-150 min-h-screen flex justify-center items-center py-10">
+    <div class="w-full max-w-md md:max-w-xl">
+      <!-- Header -->
+      <div class="relative bg-gray-150 md:h-screen flex justify-center items-center">
+        <div class="absolute relative w-full max-w-md md:max-w-xl">
+          <div class="bg-amber-500 top-0 left-0 w-full shadow-lg rounded-b-3xl h-[240px] lg:h-[310px] flex items-end md:h-[240px] ">
+            <div class="ml-6">
+              <a href="selectaddress.html"
+                 class="py-3 px-4 text-sm lg:text-base font-medium text-white bg-green-700 hover:bg-gray-400 rounded-lg relative  z-50 lg:-top-6 md:-top-5 -top-5">
+                ย้อนกลับ
               </a>
             </div>
           </div>
-        </div>
-
-        <div class="absolute bg-green-600 top-0 left-0 w-full p-6 text-white shadow-lg rounded-b-4xl md:rounded-b-3xl">
-          <img class="absolute top-4 left-4 h-24" src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg"
-            alt="Logo" />
-          <div class="relative left-6">
-            <h1 class="text-center text-white text-md md:text-2xl font-bold">ระบบทะเบียนการศึกษา</h1>
-            <div class="bg-white h-1 w-4/7 my-1 mx-auto"></div>
-            <h2 class="text-center text-white text-md font-semibold md:text-3xl">มหาวิทยาลัยแม่โจ้</h2>
-            <h3 class="text-center text-white text-md md:text-2xl">MAEJO UNIVERSITY</h3>
-          </div>
-        </div>
-
-        <!-- ส่วนเนื้อหาด้านใน -->
-        <div class="relative flex justify-center pt-3">
-          <div class="w-full max-w-md md:max-w-xl px-4">
-            <h2 class="text-xl font-bold text-green-800 mb-4">ตารางการใช้ห้อง</h2>
-
-            <!-- กล่องฟอร์ม -->
-            <div class="bg-gray-200 p-4 rounded-xl space-y-4">
-              <!-- คณะ -->
-              <div>
-                <label class="block text-sm font-semibold text-green-900 mb-1">คณะ:</label>
-                <select class="w-full p-2 rounded-lg">
-                  <option>วิทยาศาสตร์</option>
-                  <option>บริหารศาสตร์</option>
-                  <option>เกษตรศาสตร์</option>
-                  
-                </select>
-              </div>
-
-              <!-- อาคาร -->
-              <div>
-                <label class="block text-sm font-semibold text-green-900 mb-1">อาคาร:</label>
-                <select class="w-full p-2 rounded-lg">
-                  <option>อาคาร60ปี</option>
-                  <option>อาคารจุฬา</option>
-                </select>
-              </div>
-
-              <!-- ชั้น -->
-              <div>
-                <label class="block text-sm font-semibold text-green-900 mb-1">ชั้น:</label>
-                <select class="w-full p-2 rounded-lg">
-                  <option>ชั้น1</option>
-                  <option>ชั้น2</option>
-                  <option>ช้ัน3</option>
-                  <option>ชั้น4</option>
-                  <option>ชั้น 5</option>
-                  <option>ชั้น 6</option>
-                </select>
-              </div>
-
-              <!-- ห้อง -->
-              <div>
-                <label class="block text-sm font-semibold text-green-900 mb-1">ห้อง:</label>
-                <select class="w-full p-2 rounded-lg">
-                  <option>3203</option>
-                  <option>Lab3-4</option>
-                  <option>Lab5</option>
-                  <option>Lab7</option>
-                </select>
-              </div>
-
-              <!-- ความจุของห้อง -->
-              <div>
-                <label class="block text-sm font-semibold text-green-900 mb-1">ความจุของห้อง</label>
-                <select class="w-full p-2 rounded-lg">
-                  <option>ทั้งหมด</option>
-                </select>
-              </div>
-
-              <!-- วันที่ -->
-              <div>
-                <label class="block text-sm font-semibold text-green-900 mb-1">วันที่</label>
-                <div class="relative">
-                  <select class="w-full p-2 rounded-lg pr-10">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                    <option>13</option>
-                    <option>14</option>
-                    <option>15</option>
-                    <option>16</option>
-                    <option>17</option>
-                    <option>18</option>
-                    <option>19</option>
-                    <option>20</option>
-                    <option>21</option>
-                    <option>22</option>
-                    <option>23</option>
-                    <option>24</option>
-                    <option>25</option>
-                    <option>26</option>
-                    <option>27</option>
-                    <option>28</option>
-                    <option>29</option>
-                    <option>30</option>
-                  </select>
-                  <span class="absolute right-3 top-2.5 text-gray-500"></span>
+    
+          <div
+                    class="absolute bg-green-600 top-0 left-0 w-full p-6 lg:p-12 text-white shadow-lg rounded-b-3xl h-[180px] lg:h-[240px]">
+                    <img class="absolute top-4 left-4 h-24 lg:h-32 lg:top-8 lg:left-8"
+                        src="https://upload.wikimedia.org/wikipedia/th/b/b7/MJU_LOGO.svg" alt="Logo" />
+                    <div class=" relative left-6 lg:left-12">
+                        <h1 class="text-center text-white text-md md:text-2xl lg:text-3xl xl:text-4xl font-bold">ระบบทะเบียนการศึกษา</h1>
+                        <div class="bg-white h-1 w-4/7 my-1 mx-16 lg:mx-24 lg:h-1"></div>
+                        <h2 class="text-center text-white text-md font-semibold md:text-3xl lg:text-4xl xl:text-5xl">มหาวิทยาลัยแม่โจ้</h2>
+                        <h3 class="text-center text-white text-md md:text-2xl lg:text-3xl xl:text-4xl">MAEJO UNIVERSITY</h3>
+                    </div>
                 </div>
-              </div>
+
+      <!-- Content -->
+      <div class="relative flex justify-center pt-3">
+        <div class="w-full max-w-md md:max-w-xl px-4 mt-6">
+          <h2 class="text-xl font-bold text-green-800 mb-4">ตารางการใช้ห้อง</h2>
+
+          <div class="bg-gray-200 p-4 rounded-xl space-y-4">
+            <!-- คณะ -->
+            <div>
+              <label class="block text-sm font-semibold text-green-900 mb-1">คณะ:</label>
+              <select class="w-full p-2 rounded-lg">
+                <option>วิทยาศาสตร์</option>
+                <option>บริหารศาสตร์</option>
+                <option>เกษตรศาสตร์</option>
+              </select>
             </div>
 
-            <!-- ปุ่มยืนยัน -->
-            <div class="flex justify-center mt-5 items-center">
-              <a href="#notification">
-                <button class="bg-green-700 text-white px-15 py-2 rounded-lg hover:bg-green-800 transition-colors">
-                  ยืนยัน
-                </button>
-              </a>
+            <!-- อาคาร -->
+            <div>
+              <label class="block text-sm font-semibold text-green-900 mb-1">อาคาร:</label>
+              <select class="w-full p-2 rounded-lg">
+                <option>อาคาร60ปี</option>
+                <option>อาคารจุฬา</option>
+              </select>
             </div>
 
+            <!-- ชั้น -->
+            <div>
+              <label class="block text-sm font-semibold text-green-900 mb-1">ชั้น:</label>
+              <select class="w-full p-2 rounded-lg">
+                <option>ชั้น1</option>
+                <option>ชั้น2</option>
+                <option>ชั้น3</option>
+                <option>ชั้น4</option>
+                <option>ชั้น5</option>
+                <option>ชั้น6</option>
+              </select>
+            </div>
+
+            <!-- ห้อง -->
+            <div>
+              <label class="block text-sm font-semibold text-green-900 mb-1">ห้อง:</label>
+              <select class="w-full p-2 rounded-lg">
+                <option>3203</option>
+                <option>Lab3-4</option>
+                <option>Lab5</option>
+                <option>Lab7</option>
+              </select>
+            </div>
+
+            <!-- ความจุ -->
+            <div>
+              <label class="block text-sm font-semibold text-green-900 mb-1">ความจุของห้อง</label>
+              <select class="w-full p-2 rounded-lg">
+                <option>ทั้งหมด</option>
+              </select>
+            </div>
+
+            <!-- วันที่ -->
+            <div>
+              <label class="block text-sm font-semibold text-green-900 mb-1">วันที่</label>
+              <select class="w-full p-2 rounded-lg">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+                <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+              </select>
+            </div>
           </div>
+
+          <!-- ปุ่ม -->
+          <div class="flex justify-between mt-6">
+            <button onclick="showNotification()" class="bg-green-700 text-white px-6 py-2 rounded-lg hover:bg-green-800 transition-colors">
+              ตรวจสอบ
+            </button>
+            <a href="selectedfacuty.html">
+              <button class="bg-green-700 text-white px-6 py-2 rounded-lg hover:bg-green-800 transition-colors">
+                ยืนยัน
+              </button>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
+  </div>
 
-
+  <!-- JavaScript -->
+  <script>
+    function showNotification() {
+      const noti = document.getElementById('notification');
+      noti.classList.add('show');
+      setTimeout(() => {
+        noti.classList.remove('show');
+      }, 3000);
+    }
+  </script>
 </body>
 
 </html>
